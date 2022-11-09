@@ -188,3 +188,16 @@ function getMean(array){
 
 }
 
+median([2, 1, 3, 4]);
+function getMedian(array){
+
+    if(array.length == 0){
+        return;
+    }
+array.sort((a, b) => a - b);
+let midpoint = Math.floor(array.length / 2);
+let median = array.length % 2 === 1 ?
+array[midpoint] : (array[midpoint - 1] + array[midpoint]) /2;
+return median;
+}
+
